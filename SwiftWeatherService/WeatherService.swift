@@ -114,8 +114,8 @@ public struct CurrentWeatherData {
     init(json:JSON!){
         if let sys = json["sys"].dictionaryObject {
             self.country = sys["country"] as? String//国家代码
-            self.sunrise = sys["sunrise"] as? Double//日落
-            self.sunset = sys["sunset"] as? Double//日出
+            self.sunrise = sys["sunrise"] as? Double//日出
+            self.sunset = sys["sunset"] as? Double//日落
         }
         //    "weather":[{"id":804,"main":"clouds","description":"overcast clouds","icon":"04n"}],
         if let weather = json["weather"][0].dictionaryObject {
